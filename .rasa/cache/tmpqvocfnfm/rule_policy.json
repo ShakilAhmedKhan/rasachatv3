@@ -1,0 +1,23 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_product\"}}]": "action_show_product",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"show_product\"}}, {\"prev_action\": {\"action_name\": \"action_show_product\"}, \"user\": {\"intent\": \"show_product\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"suggest_product\"}}]": "action_suggest_product",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"suggest_product\"}}, {\"prev_action\": {\"action_name\": \"action_suggest_product\"}, \"user\": {\"intent\": \"suggest_product\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"order_product\"}}]": "action_order_product",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"order_product\"}}, {\"prev_action\": {\"action_name\": \"action_order_product\"}, \"user\": {\"intent\": \"order_product\"}}]": "utter_order_placed",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"order_product\"}}, {\"prev_action\": {\"action_name\": \"action_order_product\"}, \"user\": {\"intent\": \"order_product\"}}, {\"prev_action\": {\"action_name\": \"utter_order_placed\"}, \"user\": {\"intent\": \"order_product\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "predicting default action with intent back",
+      "predicting default action with intent restart"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - show_product
+  - suggest_product
+  - order_product
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye!"
+
+  utter_ask_product:
+    - text: "Please provide the product name."
+
+  utter_order_placed:
+    - text: "Your order has been placed successfully!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_show_product
+  - action_suggest_product
+  - action_order_product

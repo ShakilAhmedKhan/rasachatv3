@@ -1,0 +1,29 @@
+version: "3.1"
+
+stories:
+- story: greet and show product
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: show_product
+  - action: action_show_product
+
+- story: greet and suggest product
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: suggest_product
+  - action: action_suggest_product
+
+- story: greet and order product
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: order_product
+  - action: action_order_product
+  - action: utter_order_placed
+
+- story: goodbye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

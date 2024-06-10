@@ -1,0 +1,22 @@
+version: "3.1"
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Suggest a product
+  steps:
+  - intent: suggest_product
+  - action: action_suggest_product
+
+- rule: Show product details
+  steps:
+  - intent: show_product
+  - action: action_show_product
+
+- rule: Order a product
+  steps:
+  - intent: order_product
+  - action: action_order_product
+  - action: utter_order_placed

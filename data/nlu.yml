@@ -1,0 +1,34 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+
+- intent: show_product
+  examples: |
+    - Show me the details of [Product 1](product_name)
+    - I want to know about [Product 2](product_name)
+    - Tell me about [Product 3](product_name)
+
+- intent: suggest_product
+  examples: |
+    - Can you suggest a product?
+    - Recommend a product
+    - Suggest a product for me
+
+- intent: order_product
+  examples: |
+    - I want to order [Product 1](product_name)
+    - Place an order for [Product 2](product_name)
+    - I would like to buy [Product 3](product_name)
