@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+</head>
+<body>
+    <div id="rasa-chat-widget" data-websocket-url="http://localhost:8098/socket.io"></div>
+<!--    <div id="rasa-chat-widget" data-websocket-url="ws://localhost:5005"></div>-->
+    <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+<!--    <script>-->
+<!--        (function() {-->
+<!--            const rasaWidget = document.getElementById('rasa-chat-widget');-->
+<!--            const socketUrl = rasaWidget.getAttribute('data-websocket-url');-->
+<!--            let socket;-->
+<!--            let sessionId = localStorage.getItem('session_id');-->
+
+<!--            if (!sessionId) {-->
+<!--                sessionId = Math.random().toString(36).substring(7);-->
+<!--                localStorage.setItem('session_id', sessionId);-->
+<!--            }-->
+
+<!--            const startChat = () => {-->
+<!--                socket = new WebSocket(`${socketUrl}/socket.io/?EIO=4&transport=websocket&session_id=${sessionId}`);-->
+<!--                socket.onopen = () => {-->
+<!--                    console.log('WebSocket connection established');-->
+<!--                    // Send a session start message to Rasa-->
+<!--                    const session_start_message = {-->
+<!--                        "event": "session_started",-->
+<!--                        "session_id": sessionId-->
+<!--                    };-->
+<!--                    socket.send(JSON.stringify(session_start_message));-->
+<!--                };-->
+<!--                socket.onmessage = (event) => {-->
+<!--                    const data = JSON.parse(event.data);-->
+<!--                    if (data.text) {-->
+<!--                        console.log('Message from server:', data.text);-->
+<!--                        // Display the message in the chat widget-->
+<!--                        const messageElement = document.createElement('div');-->
+<!--                        messageElement.textContent = data.text;-->
+<!--                        document.body.appendChild(messageElement);-->
+<!--                    }-->
+<!--                };-->
+<!--                socket.onerror = (error) => {-->
+<!--                    console.log('WebSocket error:', error);-->
+<!--                };-->
+<!--                socket.onclose = () => {-->
+<!--                    console.log('WebSocket connection closed');-->
+<!--                };-->
+<!--            };-->
+
+<!--            startChat();-->
+<!--        })();-->
+<!--    </script>-->
+</body>
+</html>
